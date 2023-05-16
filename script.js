@@ -14,7 +14,7 @@ window.onload = function() {
     //JSON始
     
     // XMLHttpRequestを使ってjsonデータを読み込む
-    let requestURL = 'data.json';//jsonへのパス
+    let requestURL = 'https://taikun24.github.io/tiriquiz/quiz.json';//jsonへのパス
     let request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'json';
@@ -28,7 +28,7 @@ window.onload = function() {
     }
     //下準備
     //const parsed = JSON.parse(json);
-    var list = mj;
+    var list = mj.quizs;
     //シャッフル
     list = arrayShuffle(list);
     //分解    
