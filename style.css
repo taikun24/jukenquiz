@@ -72,7 +72,16 @@ main{
 	border-color: #fff;
 	color: #fff;
 }
-
+	#OK{
+		position: absolute;
+		margin-top: 250px;
+		margin-left: 40%;
+	}
+	#NG{
+		position: absolute;
+		margin-top: 250px;
+		margin-left: 40%;
+	}
 #OK,#NG{
 	width: 20%;
 }
