@@ -13,11 +13,7 @@ window.onload = function() {
     //JSON始
     import data from "./quiz.json" assert { type: "json" };
       console.log(data);
-    var json;
-    var url = 'https://taikun24.github.io/tiriquiz/quiz.json';
-    $.getJSON(url, function(data){
-        json = data;
-    });
+    const json = data;
     //下準備
     const parsed = JSON.parse(json);
     var list = parsed.quizs;
