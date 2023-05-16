@@ -72,16 +72,7 @@ main{
 	border-color: #fff;
 	color: #fff;
 }
-#OK{
-	position: absolute;
-	margin-top: 250px;
-	margin-left: 40%;
-}
-#NG{
-	position: absolute;
-	margin-top: 250px;
-	margin-left: 40%;
-}
+
 #OK,#NG{
 	width: 20%;
 }
@@ -99,3 +90,35 @@ main{
 .hide{
 	display: none;
 }
+/*mobile*/
+@media (max-width:600px){
+	#input{
+		margin:0px 10%;
+		height: 60px;
+		font-size: 50px;
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+	}
+	#OK{
+		position: absolute;
+		margin-top: 200px;
+		margin-left: 20%;
+	}
+	#NG{
+		position: absolute;
+		margin-top: 200px;
+		margin-left: 25%;
+	}
+	#OK,#NG{
+		width: 50%;
+	}
+	.button{
+		margin:5% 20%;
+		height: 100%;
+		font-size: 300%;
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+		background-color: #5E88EA;
+		border-color: #fff;
+		color: #fff;
+	}
+}
+/*end*/
