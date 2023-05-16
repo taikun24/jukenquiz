@@ -28,7 +28,7 @@ window.onload = function() {
     }
     //下準備
     //const parsed = JSON.parse(json);
-    var list = mj.quizs;
+    var list = mj;
     //シャッフル
     list = arrayShuffle(list);
     //分解    
