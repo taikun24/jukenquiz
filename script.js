@@ -9,29 +9,28 @@ var correct = new Audio();
 correct.src = "sound/correct.mp3";
 var wrong = new Audio();
 wrong.src = "sound/wrong.mp3";
-var mj;
 window.onload = function() {
     //JSON始
     
-    // XMLHttpRequestを使ってjsonデータを読み込む
-    let requestURL = 'https://taikun24.github.io/tiriquiz/quiz.json';//jsonへのパス
-    let request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.responseType = 'json';
-    request.send();
-     
-    // JSONデータをJavaScriptオブジェクトに変換
-    request.onload = function () {
-      let data = request.response;
-      data = JSON.parse(JSON.stringify(data));
-      mj = data;
-    }
+    
+    const json = `{
+        "quizs":
+            [
+                {"question":"関東平野を流れる川は?","answer":"利根川","type":"川"},
+                {"question":"quiz2","answer":"2","type":"川"},
+                {"question":"quiz3","answer":"3","type":"川"},
+                {"question":"quiz4","answer":"4","type":"川"},
+                {"question":"quiz5","answer":"5","type":"川"},
+                {"question":"quiz6","answer":"6","type":"川"}
+            ]
+        }`;
+    
     //下準備
-    //const parsed = JSON.parse(json);
-    var list = mj.quizs;
+    const parsed = JSON.parse(json);
+    var list = parsed.quizs;
     //シャッフル
     list = arrayShuffle(list);
-    //分解    
+    //分解
     for (var i = 0; i < max; i++) {
         questions[i] = list[i].question;
         answer[i] = list[i].answer;
@@ -50,7 +49,7 @@ window.document.onkeydown = function(event){
         }
     }
 }
-function sj(data){mj = data;console.log(mj.quizs)}
+
 function arrayShuffle(array) {
   for(let i = (array.length - 1); 0 < i; i--){
 
