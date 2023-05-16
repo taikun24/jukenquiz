@@ -13,9 +13,19 @@ var mj;
 window.onload = function() {
     //JSON始
     
-    fetch('https://taikun24.github.io/tiriquiz/quiz.json')
-        .then((response) => response.json())
-        .then((data) => sj(data));
+    // XMLHttpRequestを使ってjsonデータを読み込む
+    let requestURL = 'data.json';//jsonへのパス
+    let request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+     
+    // JSONデータをJavaScriptオブジェクトに変換
+    request.onload = function () {
+      let data = request.response;
+      data = JSON.parse(JSON.stringify(data));
+      mj = data;
+    }
     //下準備
     //const parsed = JSON.parse(json);
     var list = mj.quizs;
