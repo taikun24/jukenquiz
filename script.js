@@ -21,7 +21,7 @@ window.onload = function() {
     var list = mj.quizs;
     //シャッフル
     list = arrayShuffle(list);
-    //分解
+    //分解    
     for (var i = 0; i < max; i++) {
         questions[i] = list[i].question;
         answer[i] = list[i].answer;
@@ -40,7 +40,7 @@ window.document.onkeydown = function(event){
         }
     }
 }
-function sj(data){mj = data}
+function sj(data){mj = data;console.log(mj.quizs)}
 function arrayShuffle(array) {
   for(let i = (array.length - 1); 0 < i; i--){
 
