@@ -9,11 +9,12 @@ var correct = new Audio();
 correct.src = "sound/correct.mp3";
 var wrong = new Audio();
 wrong.src = "sound/wrong.mp3";
+var json;
 window.onload = function() {
     //JSON始
-    import data from "./quiz.json" assert { type: "json" };
-      console.log(data);
-    const json = data;
+    fetch('http://example.com/movies.json')
+        .then((response) => response.json())
+        .then((data) => setjson(data));
     //下準備
     const parsed = JSON.parse(json);
     var list = parsed.quizs;
@@ -38,7 +39,9 @@ window.document.onkeydown = function(event){
         }
     }
 }
-
+function setjson(jo){
+    json = jo;
+}
 function arrayShuffle(array) {
   for(let i = (array.length - 1); 0 < i; i--){
 
