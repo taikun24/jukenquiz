@@ -64,11 +64,11 @@ main{
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .button{
-	margin:5% 40%;
+	margin:10px 40%;
 	height: 100%;
 	font-size: 300%;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
-	background-color: #5E88EA;
+	background-color: #EB9033;
 	border-color: #fff;
 	color: #fff;
 }
@@ -96,8 +96,13 @@ main{
 	font-size: 800%;
 	margin:0px 0px;
 }
-.hide{
-	display: none;
+#tans{
+	display: flex;
+	justify-content: center;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-size: 50px;
+	margin: 5px 0px;
+	color:blue;
 }
 /*mobile*/
 @media (max-width:600px){
@@ -125,9 +130,14 @@ main{
 		height: 100%;
 		font-size: 300%;
 		font-family: 'M PLUS Rounded 1c', sans-serif;
-		background-color: #5E88EA;
+		background-color:#EB9033;
 		border-color: #fff;
 		color: #fff;
 	}
+	.question h1{font-size: 250%}
+
 }
 /*end*/
+.hide{
+	display: none!important;
+}
