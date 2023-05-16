@@ -9,11 +9,13 @@ var correct = new Audio();
 correct.src = "sound/correct.mp3";
 var wrong = new Audio();
 wrong.src = "sound/wrong.mp3";
+var mj;
 window.onload = function() {
     //JSON始
-    const mj = fetch('https://taikun24.github.io/tiriquiz/quiz.json')
+    
+    fetch('https://taikun24.github.io/tiriquiz/quiz.json')
         .then((response) => response.json())
-        .then((data) => setjson(data));
+        .then((data) => sj(data));
     //下準備
     //const parsed = JSON.parse(json);
     var list = mj.quizs;
@@ -38,6 +40,7 @@ window.document.onkeydown = function(event){
         }
     }
 }
+function sj(data){mj = data}
 function arrayShuffle(array) {
   for(let i = (array.length - 1); 0 < i; i--){
 
