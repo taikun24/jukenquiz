@@ -12,7 +12,7 @@ wrong.src = "sound/wrong.mp3";
 var json;
 window.onload = function() {
     //JSON始
-    fetch('http://example.com/movies.json')
+    fetch('https://taikun24.github.io/tiriquiz')
         .then((response) => response.json())
         .then((data) => setjson(data));
     //下準備
