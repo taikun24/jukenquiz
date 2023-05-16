@@ -11,6 +11,8 @@ var wrong = new Audio();
 wrong.src = "sound/wrong.mp3";
 window.onload = function() {
     //JSON始
+    import data from "./quiz.json" assert { type: "json" };
+      console.log(data);
     var json;
     var url = 'https://taikun24.github.io/tiriquiz/quiz.json';
     $.getJSON(url, function(data){
