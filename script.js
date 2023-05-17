@@ -10,9 +10,15 @@ correct.src = "sound/correct.mp3";
 var wrong = new Audio();
 wrong.src = "sound/wrong.mp3";
 window.onload = function() {
-    //JSON始
+    const url = new URL(window.location.href);
+    const params = url.searchParams;
+    console.log(params);
+    if(params.get("nof")!=undefined){
+        console.log(params.get("nof"));
+        max = params.get("nof");
+    }
     
-    
+    //JSON
     const json = `{
         "quizs":
             [
