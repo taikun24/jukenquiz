@@ -104,6 +104,31 @@ main{
 	margin: 5px 0px;
 	color:blue;
 }
+.stmenu{
+	background-color: whitesmoke;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+aside{
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+
+}
+.inputs{
+	width: 50%;
+	display: flex;
+}
+#checkboxs{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#checkboxs div{
+	width: 300%;
+}
 /*mobile*/
 @media (max-width:600px){
 	#input{
