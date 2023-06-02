@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>地理クイズ</title>
+	<title>中学受験用クイズ</title>
 	<link rel="stylesheet" href="style.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,12 +10,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="image/apple-icon.png" sizes="180x180">
+	<link rel="icon" type="image/png" href="image/android-icon.png" sizes="192x192">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<header class="header">
-		<h1><a href="index.html">地理クイズ</a></h1>
+		<h1><a href="index.html">中学受験用クイズ</a></h1>
 		<nav>
 			<ul>
 				<a href="list.html">一覧</a>
@@ -30,14 +32,39 @@
 	</div>
 	<main>
 		<article class="main">
-			メインバー
+			<div class="stmenu">
+				<h2>Start</h2>
+				<div class="inputs">
+					<div>
+
+						<div>問題数:</div>
+						<input type="text" id="numque" placeholder="1~60"></input>
+
+					</div>
+					<div id="checkboxs">
+						<div style="margin-left: 3%;">ジャンル:</div>
+						<div>
+						<input type="checkbox" name="food" id="food1" value="1" checked="checked"><label for="food1">川</label>
+						</div>
+						<div>
+						<input type="checkbox" name="food" id="food2" value="2" checked="checked"><label for="food2">平野</label>
+						</div>
+						<div>
+						<input type="checkbox" name="food" id="food3" value="3" checked="checked"><label for="food3">盆地</label>
+						</div>
+						<div>
+						<input type="checkbox" name="food" id="food4" value="4" checked="checked"><label for="food4">県庁所在地</label>
+						</div>
+					</div>
+				</div>
+			</div>
 		</article>
 		<aside class="side">
 			<h3><a href="quiz.html">クイックスタート</a></h3>
 			<nav class="sidenav">
-				<ul><a href="quiz.html">クイックスタート</a></ul>
-				<ul><a href="">クイックスタート</a></ul>
-				<ul><a href="">クイックスタート</a></ul>
+				<ul><a href="quiz.html?nof=5">5問</a></ul>
+				<ul><a href="quiz.html?nof=10">10問</a></ul>
+				<ul><a href="quiz.html?nof=30">30問</a></ul>
 			</nav>
 		</aside>
 	</main>
