@@ -191,10 +191,18 @@ function result(){
     for (var i = 0; i < questions.length; i++) {
         if(uans[i]){
             color = "red";vw = "○";
+            detail = detail + `
+        <ul class="quizans">
+            <nav style="display:flex;flex-direction: row;">
+                <h3>`+(i+1)+"/"+questions.length+`</h3>
+                <h3 style="padding-left: 20%;color: `+color+`;font-weight:bold">`+vw+`</h3>
+            </nav>
+            <h2>`+questions[i]+`</h2>
+            <h2>answer:`+answer[i]+`</h2>
+        </ul>
+        `;
         }else{
-            color = "blue";vw = "✖︎";
-        }
-        detail = detail + `
+            color = "blue";vw = "✖︎";detail = detail + `
         <ul class="quizans">
             <nav style="display:flex;flex-direction: row;">
                 <h3>`+(i+1)+"/"+questions.length+`</h3>
@@ -205,6 +213,8 @@ function result(){
             <h2 style="border-bottom: 1px solid #999;">true answer:`+answer[i]+`</h2>
         </ul>
         `;
+        }
+        
     }
     document.getElementById('detail').innerHTML = detail;
 }
