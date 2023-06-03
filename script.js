@@ -4,6 +4,7 @@ var type =  new Array();
 var dsc = new Array();
 var now = 0;
 var max = 20;
+var typec = undefined;
 var uans = new Array();
 var uinp = new Array();
 var correct = new Audio();
@@ -18,9 +19,13 @@ window.onload = function() {
         console.log(params.get("nof"));
         max = params.get("nof");
     }
+    if(params.get("type")!=undefined){
+        console.log(params.get("type"));
+        typec = params.get("type");
+    }
     
     //JSON
-    const json = `{
+    const jsontiri = `{
         "quizs":
             [
                 {"question":"北海道で最も長い河川は？","answer":"石狩川","type":"地理（北海道・東北）","dsc":""},
@@ -477,16 +482,30 @@ window.onload = function() {
         }`;
     
     //下準備
-    const parsed = JSON.parse(json);
+    const parsed = JSON.parse(jsontiri);
     var list = parsed.quizs;
     //シャッフル
     list = arrayShuffle(list);
     //分解
-    for (var i = 0; i < max; i++) {
-        questions[i] = list[i].question;
-        answer[i] = list[i].answer;
-        type[i] = list[i].type;
-        dsc[i] = list[i].dsc;
+    if(typec===undefined){
+        for (var i = 0; i < max; i++) {
+            questions[i] = list[i].question;
+            answer[i] = list[i].answer;
+            type[i] = list[i].type;
+            dsc[i] = list[i].dsc;
+        }
+    }else{
+            let r = 0;
+            for (var i = 0; i < list.length; i++) {
+                if(~list[i].type.indexOf(typec)){
+                    questions[r] = list[i].question;
+                    answer[r] = list[i].answer;
+                    type[r] = list[i].type;
+                    dsc[r] = list[i].dsc;
+                    r++;
+                }
+                if(r==max){break;}
+        }
     }
     setQuiz();
 }
