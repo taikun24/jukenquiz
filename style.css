@@ -83,13 +83,13 @@ main{
 		position: absolute;
 	  left: 0;
 	  right: 0;
-	  top: 15%;
+	  top: 5%;
   	bottom: 0%;
 	  margin: auto;
 
 	}
 #OK,#NG{
-	width: 20%;
+	width: 15%;
 }
 .rs{
 	font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -135,6 +135,14 @@ aside{
 #checkboxs div{
 	width: 300%;
 }
+#tdsc{
+	font-size: 200%;
+  display: flex;
+  justify-content: center;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin: -3px 0px;
+  color: black;
+}
 /*mobile*/
 @media (max-width:600px){
 	.wrapper{
@@ -177,7 +185,14 @@ aside{
 	.question h1{font-size: 150%;margin-top: 0%;}
 	.question p {font-size: 70%;margin-top: 0%;}
 	#tans{font-size: 150%}
-
+#tdsc{
+	font-size: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin: -3px 0px;
+  color: black;
+}
 }
 /*end*/
 .hide{

@@ -1,6 +1,7 @@
 var questions =  new Array();
 var answer =  new Array();
 var type =  new Array();
+var dsc = new Array();
 var now = 0;
 var max = 20;
 var uans = new Array();
@@ -485,6 +486,7 @@ window.onload = function() {
         questions[i] = list[i].question;
         answer[i] = list[i].answer;
         type[i] = list[i].type;
+        dsc[i] = list[i].dsc;
     }
     setQuiz();
 }
@@ -538,6 +540,9 @@ function ans(){
         tans.className = "";
         tans.innerHTML = answer[now];
     }
+    var tdsc = document.getElementById('tdsc');
+    tdsc.className = "";
+    tdsc.innerHTML = dsc[now];
     uinp[now] = answe;
     let one = document.getElementById('1');
     let two = document.getElementById('2');
@@ -558,6 +563,8 @@ function nxt(){
     }else{
         result();
     }
+    var tdsc = document.getElementById('tdsc');
+    tdsc.className = "hide";
 }
 function result(){
     document.getElementById('1').className = "button hide";
@@ -589,6 +596,7 @@ function result(){
             </nav>
             <h2>`+questions[i]+`</h2>
             <h2>answer:`+answer[i]+`</h2>
+            <h4 style="font-size:100%">`+dsc[i]+`</h4>
         </ul>
         `;
         }else{
@@ -597,10 +605,12 @@ function result(){
             <nav style="display:flex;flex-direction: row;">
                 <h3>`+(i+1)+"/"+questions.length+`</h3>
                 <h3 style="padding-left: 20%;color: `+color+`;font-weight:bold">`+vw+`</h3>
+                
             </nav>
             <h2>`+questions[i]+`</h2>
             <h2>your answer:`+uinp[i]+`</h2>
             <h2 style="border-bottom: 1px solid #999;">true answer:`+answer[i]+`</h2>
+            <h4 style="font-size:120%">`+dsc[i]+`</h4>
         </ul>
         `;
         }
