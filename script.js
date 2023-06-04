@@ -1012,3 +1012,25 @@ function result(){
     }
     document.getElementById('detail').innerHTML = detail;
 }
+function restart(){
+    if(typec == undefined){typec="";}
+    window.location.href = "quiz.html?nof="+max+"&type="+typec;
+}
+function jump(tp){
+    switch(tp){
+        case "地理":
+            window.location.href = "quiz.html?type=地理";
+            break;
+
+        case "歴史":
+            window.location.href = "quiz.html?type=歴史";
+            break;
+
+        case "理科":
+            window.location.href = "quiz.html?type=理科";
+            break;
+
+        default:
+
+    }
+}
