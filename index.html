@@ -32,32 +32,21 @@
 	</div>
 	<main>
 		<article class="main">
-			<div class="stmenu">
-				<h2>Start</h2>
-				<div class="inputs">
-					<div>
-
-						<div>問題数:</div>
-						<input type="text" id="numque" placeholder="1~60"></input>
-
-					</div>
-					<div id="checkboxs">
-						<div style="margin-left: 3%;">ジャンル:</div>
-						<div>
-						<input type="checkbox" name="food" id="food1" value="1" checked="checked"><label for="food1">川</label>
-						</div>
-						<div>
-						<input type="checkbox" name="food" id="food2" value="2" checked="checked"><label for="food2">平野</label>
-						</div>
-						<div>
-						<input type="checkbox" name="food" id="food3" value="3" checked="checked"><label for="food3">盆地</label>
-						</div>
-						<div>
-						<input type="checkbox" name="food" id="food4" value="4" checked="checked"><label for="food4">県庁所在地</label>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div class="items">
+			<button class="item" onclick="jump('地理');">
+				<img src="https://3.bp.blogspot.com/-xQNOYwWqg0c/UguJadClyhI/AAAAAAAAXa0/OkBpN_x_SNM/s800/nihonchizu.png" class="itemimg">
+				<h2 class="itemtext">地理</h2>
+			</button>
+			<button class="item" onclick="jump('歴史');">
+				<img src="https://1.bp.blogspot.com/-poZc0saEoQg/Wm1yviL_kLI/AAAAAAABJ7E/18T9oKPrfpoAU7vRIEipTKXspSlJYqhywCLcBGAs/s800/landmark_houryuji.png" >
+				<h2 class="itemtext">歴史</h2>
+			</button>
+			<button class="item" onclick="jump('理科');">
+				<img src="https://illustmint.com/wp-content/uploads/2020/12/science_2061.png" class="itemimg">
+				<h2 class="itemtext">理科</h2>
+			</button>
+			
+		</div>
 		</article>
 		<aside class="side">
 			<h3><a href="quiz.html">クイックスタート</a></h3>
@@ -68,5 +57,6 @@
 			</nav>
 		</aside>
 	</main>
+	<script src="script.js"></script>
 </body>
 </html>
