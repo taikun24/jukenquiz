@@ -11,6 +11,7 @@ var correct = new Audio();
 correct.src = "sound/correct.mp3";
 var wrong = new Audio();
 wrong.src = "sound/wrong.mp3";
+var selection = "地理";
 window.onload = function() {
     const url = new URL(window.location.href);
     const params = url.searchParams;
@@ -1016,8 +1017,8 @@ function restart(){
     if(typec == undefined){typec="";}
     window.location.href = "quiz.html?nof="+max+"&type="+typec;
 }
-function jump(tp){
-    switch(tp){
+function jump(){
+    switch(selection){
         case "地理":
             window.location.href = "quiz.html?type=地理";
             break;
@@ -1029,8 +1030,9 @@ function jump(tp){
         case "理科":
             window.location.href = "quiz.html?type=理科";
             break;
-
         default:
-
     }
+}
+function select(tp){
+    selection = tp;
 }
